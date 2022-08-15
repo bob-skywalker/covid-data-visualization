@@ -49,6 +49,10 @@ svg{
     min-height: 600px
 }
 
+path:hover{
+    fill:gold
+}
+
 /* path:hover{
     fill:darkgoldenrod;
 } */

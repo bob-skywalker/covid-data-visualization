@@ -25,7 +25,9 @@ export const map = function(){
                 return parseInt(item['us_county_fips']) === id
                 
               })    
-              console.log(county)
+              // if (county){
+              //   return 'limegreen'
+              // }
               // if(numbers < 3000){
               //   return 'limegreen'
               // } else if ((numbers > 3000) && (numbers < 8000)){
@@ -44,15 +46,15 @@ export const map = function(){
         console.log(error)
       } else{
         countyData = topojson.feature(data, data.objects.counties).features 
-        console.log(countyData)
+        // console.log(countyData)
 
         d3.json(covidURL).then(
           (data,error)=>{
             if(error){
-              console.log(error)
+              // console.log(error)
             }else 
               covidData = data 
-              console.log(covidData)
+              // console.log(covidData)
               drawMap()
           }
         )
