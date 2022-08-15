@@ -13,6 +13,7 @@ export const map = function(){
   let canvas = d3.select('#canvas')
   let tooltip = d3.select('#tooltip')
 
+
   let drawMap = () => {
 
     canvas.selectAll('path')
@@ -23,6 +24,19 @@ export const map = function(){
             .attr('class','county')
             .attr('data-pop',(el)=>{
               return el.id
+            })
+            .on('mouseover',(countyDataItem)=>{
+              console.log(countyDataItem)
+              tooltip.transition()
+                    .style("visibility", "visible")
+
+                let id = countyDataItem['id']
+                let county = covidData.find((item)=>{
+                  return +item.us_county_fips === id
+                })
+                tooltip.text('Total Covid Case in this County:'+ county['population'])
+
+
             })
             .attr('fill',(countyDataItem)=>{
               let id = countyDataItem['id']
@@ -65,10 +79,11 @@ export const map = function(){
               let numbers = +county['population']
               return numbers
             })
-            .on('mouseover',(countyDataItem)=>{
-              tooltip.transition()
-                    .style('visibility','visible')
-            })
+            // .on('mouseover',(countyDataItem)=>{
+            //   console.log(countyDataItem)
+            //   tooltip.transition()
+            //         .style("visibility", "visible")
+            // })
                   // let id = countyDataItem['id']
                   // let county = covidData.find((item)=>{
                   //   // console.log(item['us_county_fips'])

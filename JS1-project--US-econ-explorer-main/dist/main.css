@@ -51,8 +51,8 @@ svg{
 
 #tooltip{
     visibility: hidden;
-    width: auto;
-    height: auto;
+    /* width: auto;
+    height: auto; */
 }
 
 /* path:hover{
