@@ -44,8 +44,10 @@ export const map = function(){
                 return 'lightgreen'
               } else if ((numbers > 8000) && (numbers < 20000)){
                 return 'orange'
-              } else if ((numbers > 20000)){
+              } else if ((numbers > 20000) && (numbers < 250000)){
                 return 'tomato'
+              } else {
+                return 'firebrick'
               }
             })
 
