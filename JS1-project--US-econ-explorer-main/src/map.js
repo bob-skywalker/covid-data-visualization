@@ -4,10 +4,10 @@ export const map = function(){
 
 
   let countyURL = 'https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json'
-  let wildfireURL = 'https://services3.arcgis.com/T4QMspbfLg3qTGWY/arcgis/rest/services/2019_NIFS_OpenData/FeatureServer/1/query?outFields=*&where=1%3D1&f=geojson'
+  let covidURL = 'https://raw.githubusercontent.com/Zoooook/CoronavirusTimelapse/master/static/population.json'
   
   let countyData
-  let wildfireData
+  let covidData
   
   let canvas = d3.select('#canvas')
   
@@ -21,7 +21,20 @@ export const map = function(){
             .attr('class','county')
             .attr('fill',(countyDataItem)=>{
               let id = countyDataItem['id']
-              let county 
+              let county = covidData.find((item)=>{
+                return parseInt(item['us_county_fips']) === id
+                
+              })    
+              console.log(county)
+              // if(numbers < 3000){
+              //   return 'limegreen'
+              // } else if ((numbers > 3000) && (numbers < 8000)){
+              //   return 'lightgreen'
+              // } else if ((numbers > 8000) && (numbers < 20000)){
+              //   return 'orange'
+              // } else if ((numbers > 20000)){
+              //   return 'tomato'
+              // } 
             })
   }
 
@@ -33,13 +46,13 @@ export const map = function(){
         countyData = topojson.feature(data, data.objects.counties).features 
         console.log(countyData)
 
-        d3.json(wildfireURL).then(
+        d3.json(covidURL).then(
           (data,error)=>{
             if(error){
               console.log(error)
             }else 
-              wildfireData = data.features
-              console.log(wildfireData)
+              covidData = data 
+              console.log(covidData)
               drawMap()
           }
         )
