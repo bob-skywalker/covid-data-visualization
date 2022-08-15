@@ -38,7 +38,7 @@ export const map = function(){
             if(error){
               console.log(error)
             }else 
-              wildfireData = data 
+              wildfireData = data.features
               console.log(wildfireData)
               drawMap()
           }
