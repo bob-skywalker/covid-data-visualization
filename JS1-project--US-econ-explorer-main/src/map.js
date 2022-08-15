@@ -5,7 +5,7 @@ export const map = function(){
 
   let countyURL = 'https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json'
   let covidURL = 'https://raw.githubusercontent.com/Zoooook/CoronavirusTimelapse/master/static/population.json'
-  let unemploy = 'https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv'
+  // let unemploy = 'https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv'
 
   let countyData
   let covidData
