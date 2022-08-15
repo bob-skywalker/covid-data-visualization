@@ -11,6 +11,7 @@ export const map = function(){
   let covidData
 
   let canvas = d3.select('#canvas')
+  let tooltip = d3.select('#tooltip')
 
   let drawMap = () => {
 
@@ -50,6 +51,45 @@ export const map = function(){
                 return 'firebrick'
               }
             })
+
+            .attr('county-fips',(countyDataItem)=>{
+              return countyDataItem['id']
+            })
+            .attr('covid-county-population',(countyDataItem)=>{
+              let id = countyDataItem['id']
+              let county = covidData.find((item)=>{
+                // console.log(item['us_county_fips'])
+                return +item.us_county_fips === id
+
+              })
+              let numbers = +county['population']
+              return numbers
+            })
+            .on('mouseover',(countyDataItem)=>{
+              tooltip.transition()
+                    .style('visibility','visible')
+            })
+                  // let id = countyDataItem['id']
+                  // let county = covidData.find((item)=>{
+                  //   // console.log(item['us_county_fips'])
+                  //   return +item.us_county_fips === id
+
+                  // })
+
+
+
+            //   let id = countyDataItem['id']
+            //   let county = covidData.find((item)=>{
+            //           // console.log(item['us_county_fips'])
+            //     return +item.us_county_fips === id
+
+            //   })
+            //   tooltip.text(county['us_county_fips'] + ' - ' + county['subregion'] + ', ' + county['population'])
+            // })
+            // .on('mouseout', (countyDataItem)=>{
+            //   tooltip.transition()
+            //     .style('visibility','hidden')
+
 
   }
 

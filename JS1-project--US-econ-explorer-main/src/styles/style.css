@@ -46,6 +46,12 @@ svg{
     min-height: 600px
 }
 
+#tooltip{
+    visibility: hidden;
+    width: auto;
+    height: auto;
+}
+
 /* path:hover{
     fill:darkgoldenrod;
 } */

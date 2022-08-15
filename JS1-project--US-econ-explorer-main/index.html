@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://d3js.org/topojson.v2.min.js"></script>
     <!-- <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script> -->
@@ -19,9 +19,33 @@
     <div id="description">
       Numbers of all Covid Cases in 2019 <a href="#">Source: CovidJSON</a>
     </div>
+    <div id="tooltip">
+
+    </div>
     <svg id="canvas">
+    </svg>
 
-
+    <svg id="legend">
+      <g>
+        <rect x="10" y="0" width="40" height="30" fill="limegreen"></rect>
+        <text x="60" y="20" fill="black">Less than 3000</text>
+      </g>
+      <g>
+        <rect x="10" y="30" width="40" height="30" fill="lightgreen"></rect>
+        <text x="60" y="50" fill="black">3000 than 8000</text>
+      </g>
+      <g>
+        <rect x="10" y="60" width="40" height="30" fill="orange"></rect>
+        <text x="60" y="85" fill="black">8000 than 20000</text>
+      </g>
+      <g>
+        <rect x="10" y="90" width="40" height="30" fill="tomato"></rect>
+        <text x="60" y="115" fill="black">20000 than 250000</text>
+      </g>
+      <g>
+        <rect x="10" y="120" width="40" height="30" fill="firebrick"></rect>
+        <text x="60" y="145" fill="black">More than 250000</text>
+      </g>
     </svg>
   </body>
 
