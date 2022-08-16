@@ -6,11 +6,15 @@ export const map = async function(){
     const title = document.querySelector('#title');
     const title2 = document.querySelector('#title2');
     const toggle = document.getElementById("toggle");
+    const canvas1 = document.querySelector('#canvas');
+    const canvas2 = document.querySelector('#canvas2')
     toggle.onclick = function(){
       toggle.classList.toggle('active')
       body.classList.toggle('active')
       title.classList.toggle('hidden')
       title2.classList.toggle('hidden')
+      canvas1.classList.toggle('hidden')
+      canvas2.classList.toggle('hidden')
     }
 
 
