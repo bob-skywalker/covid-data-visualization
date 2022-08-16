@@ -1,6 +1,6 @@
 import { count } from "d3"
 
-export const map = async function(){
+export const map = async function(type){
 
   const body = document.querySelector('body');
     const title = document.querySelector('#title');

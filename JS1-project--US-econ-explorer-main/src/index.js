@@ -4,5 +4,5 @@ import {map} from './map';
 document.addEventListener('DOMContentLoaded',function(){
     // console.log('hello world');
     map();
-    
+
 });
