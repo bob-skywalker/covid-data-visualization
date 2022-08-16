@@ -44,7 +44,7 @@ body{
 }
 
 svg{
-
+    padding: 10px;
 }
 
 #canvas{
@@ -66,3 +66,11 @@ svg{
 /* path:hover{
     fill:darkgoldenrod;
 } */
+
+#leftSide{
+    display: flex;
+    background-color: darkslategrey;
+}
+
+
+

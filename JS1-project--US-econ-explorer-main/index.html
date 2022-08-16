@@ -16,16 +16,40 @@
 
   <body>
     <h1 id="title">US Covid Analyzer</h1>
-    <div id="description">
-      Numbers of all Covid Cases in 2019 <a href="#">Source: CovidJSON</a>
-    </div>
-    <div id="tooltip">
+    <div id="container">
+      <div id ='leftSide'>
+        <div id="tooltip">
 
-    </div>
-    <svg id="canvas">
-    </svg>
+        </div>
+        <svg id="legend">
+          <g>
+            <rect x="10" y="0" width="40" height="30" fill="limegreen"></rect>
+            <text x="60" y="20" fill="black">Less than 3k</text>
+          </g>
+          <g>
+            <rect x="10" y="30" width="40" height="30" fill="lightgreen"></rect>
+            <text x="60" y="50" fill="black">3k to 8k</text>
+          </g>
+          <g>
+            <rect x="10" y="60" width="40" height="30" fill="orange"></rect>
+            <text x="60" y="85" fill="black">8k to 20k</text>
+          </g>
+          <g>
+            <rect x="10" y="90" width="40" height="30" fill="tomato"></rect>
+            <text x="60" y="115" fill="black">20k to 250k</text>
+          </g>
+          <g>
+            <rect x="10" y="120" width="40" height="30" fill="firebrick"></rect>
+            <text x="60" y="145" fill="black">> 250K</text>
+          </g>
+        </svg>
+      </div>
+        <svg id="canvas">
 
-    <svg id="legend">
+        </svg>
+    </div>
+
+    <!-- <svg id="legend">
       <g>
         <rect x="10" y="0" width="40" height="30" fill="limegreen"></rect>
         <text x="60" y="20" fill="black">Less than 3000</text>
@@ -46,7 +70,7 @@
         <rect x="10" y="120" width="40" height="30" fill="firebrick"></rect>
         <text x="60" y="145" fill="black">More than 250000</text>
       </g>
-    </svg>
+    </svg> -->
   </body>
 
 </html>

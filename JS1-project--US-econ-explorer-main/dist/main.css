@@ -47,7 +47,7 @@ body{
 }
 
 svg{
-
+    padding: 10px;
 }
 
 #canvas{
@@ -56,6 +56,8 @@ svg{
 }
 
 #tooltip{
+    font-size: 30px;
+    text-align: center;
     visibility: hidden;
     color:whitesmoke;
 
@@ -70,7 +72,34 @@ svg{
     fill:darkgoldenrod;
 } */
 
+#leftSide{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    /* background-color: darkslategrey; */
+}
+
+
+#container{
+    display: flex;
+}
+
+#legend{
+    text-align: center;
+    min-height: 150px;
+    max-width: 180px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: -50px;
+}
+
+
+
+
+
+
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-
