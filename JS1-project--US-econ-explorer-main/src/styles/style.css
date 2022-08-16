@@ -48,12 +48,14 @@ svg{
 }
 
 #canvas{
+    
+    margin-left: 200px;
     min-width: 1000px;
     min-height: 620px
 }
 
 #tooltip{
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     visibility: hidden;
     color:whitesmoke;
@@ -70,6 +72,9 @@ svg{
 } */
 
 #leftSide{
+    left: -240px;
+    z-index: -1;  
+    position: absolute;
     margin-top: 80px;
     display: flex;
     flex-direction: column;
