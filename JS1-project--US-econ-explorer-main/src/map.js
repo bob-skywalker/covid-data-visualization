@@ -61,7 +61,7 @@ export const map = function(){
 
 
               if (!county){
-                return 'black'
+                return 'firebrick'
                 // return 'limegreen'
               }
               let numbers = +county['population']
