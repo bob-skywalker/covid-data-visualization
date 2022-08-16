@@ -16,7 +16,6 @@ export const map = async function(){
 
   let countyURL = 'https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json'
   let covidURL = 'https://raw.githubusercontent.com/Zoooook/CoronavirusTimelapse/master/static/population.json'
-  // let unemployURL = 'https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv'
 
   let countyData
   let covidData
@@ -24,16 +23,6 @@ export const map = async function(){
   let unemployData = await parsedData.json()
   console.log(unemployData)
 
-  d3.csv(unemployURL), function(data){
-    console.log(data)
-  }
-
-
-  // d3.csv("../data/unemployment.csv",d3.autoType).then(
-  //   function(d){
-
-  //   }
-  // )
 
 
 
