@@ -1,14 +1,42 @@
 import { count } from "d3"
-// import countyinfo from "../"
-export const map = function(){
+
+export const map = async function(){
+
+  const body = document.querySelector('body');
+    const title = document.querySelector('#title');
+    const title2 = document.querySelector('#title2');
+    const toggle = document.getElementById("toggle");
+    toggle.onclick = function(){
+      toggle.classList.toggle('active')
+      body.classList.toggle('active')
+      title.classList.toggle('hidden')
+      title2.classList.toggle('hidden')
+    }
 
 
   let countyURL = 'https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json'
   let covidURL = 'https://raw.githubusercontent.com/Zoooook/CoronavirusTimelapse/master/static/population.json'
-  // let unemploy = 'https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv'
+  // let unemployURL = 'https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv'
 
   let countyData
   let covidData
+  let parsedData = await fetch('./data/unemployment.json')
+  let unemployData = await parsedData.json()
+  console.log(unemployData)
+
+  d3.csv(unemployURL), function(data){
+    console.log(data)
+  }
+
+
+  // d3.csv("../data/unemployment.csv",d3.autoType).then(
+  //   function(d){
+
+  //   }
+  // )
+
+
+
 
   let canvas = d3.select('#canvas')
   let tooltip = d3.select('#tooltip')
@@ -143,6 +171,16 @@ export const map = function(){
       }
     })
 
+    // const body = document.querySelector('body');
+    // const title = document.querySelector('#title');
+    // const title2 = document.querySelector('#title2');
+    // const toggle = document.getElementById("toggle");
+    // toggle.onclick = function(){
+    //   toggle.classList.toggle('active')
+    //   body.classList.toggle('active')
+    //   title.classList.toggle('hidden')
+    //   title2.classList.toggle('hidden')
+    // }
 
 
 

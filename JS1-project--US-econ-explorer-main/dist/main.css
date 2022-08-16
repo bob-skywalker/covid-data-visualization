@@ -155,12 +155,12 @@ body.active{
 }
 
 
-#title.active::after{
+/* #title.active::after{
     transition: 0.5s;
     visibility:visible;
     position:absolute;
     content: 'Hello';
-}
+} */
 
 
 #title.active{
@@ -181,4 +181,3 @@ body.active{
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-
