@@ -16,6 +16,7 @@
 
   <body>
     <h1 id="title">US Covid Analyzer</h1>
+    <h1 id="title2" class="hidden">US Unemployment Data</h1>
     <div id="container">
       <div id ='leftSide'>
         <div id="tooltip">
@@ -48,6 +49,21 @@
 
         </svg>
     </div>
+    <div id="toggle">
+      <i class="indicator"></i>
+    </div>
+    <script>
+      const body = document.querySelector('body');
+      const title = document.querySelector('#title');
+      const title2 = document.querySelector('#title2');
+      const toggle = document.getElementById("toggle");
+      toggle.onclick = function(){
+        toggle.classList.toggle('active')
+        body.classList.toggle('active')
+        title.classList.toggle('hidden')
+        title2.classList.toggle('hidden')
+      }
+    </script>
 
     <!-- <svg id="legend">
       <g>
