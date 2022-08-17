@@ -56,6 +56,14 @@ svg{
     min-height: 620px
 }
 
+#canvas2{
+
+    margin-left: 200px;
+    min-width: 1000px;
+    min-height: 620px
+    
+}
+
 #tooltip{
     font-size: 20px;
     text-align: center;
