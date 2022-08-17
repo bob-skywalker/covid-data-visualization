@@ -185,20 +185,21 @@ export const map = async function(){
                 })
 
                 if (!county){
-                  return 'purple'
+                  return 'black'
                 }
 
                 if(county['unemp'] < 3.0){
                   return 'dodgerblue'
                 } else if ((county['unemp'] > 3.0 ) && (county['unemp'] < 4)){
                   return 'royalblue'
-                } else if ((county['unemp'] > 4 ) && (county['unemp'] < 6)){
+                } else if ((county['unemp'] >= 4 ) && (county['unemp'] < 6)){
                   return 'bisque'
-                } else if ((county['unemp'] > 6 ) && (county['unemp'] < 8)){
+                } else if ((county['unemp'] >= 6 ) && (county['unemp'] < 8)){
                   return 'lightsalmon'
-                } else {
+                } else if ((county['unemp'] >= 8 ) && (county['unemp'] < 99)){
                   return 'crimson'
-                }
+                } else
+                  return 'royalblue'
               })
 
 
