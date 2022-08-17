@@ -37,7 +37,13 @@ path:hover {
 #title2{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 40px;
-    color:rgb(246, 242, 242)
+    /* color:rgb(246, 242, 242) */
+}
+
+
+#title2.active{
+    transition: 2s;
+    color:rgb(246, 242, 242);
 }
 
 
@@ -50,8 +56,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:deepskyblue;
-    transition: 0.5s;
+    background-color: rgb(103, 204, 207);
+    /* background: linear-gradient(#e66465, #9198e5); */
+    transition: 3s;
 
 }
 
@@ -133,8 +140,9 @@ svg{
 }
 
 body.active{
-    transition: 3s;
+    transition: 2s;
     background-color: rgb(109, 109, 109);
+    /* background: linear-gradient(#704444, #939393); */
 }
 
 .hidden{

@@ -188,12 +188,16 @@ export const map = async function(){
                   return 'purple'
                 }
 
-                if(county['unemp'] < 3.0){
-                  return 'green'
-                }
+                if(county['unemp'] < 2.0){
+                  return 'blue'
+                } else if ((county['unemp'] > 2.0 ) && (county['unemp'] < 2.5)){
+                  return 'yellow'
+                } else if ((county['unemp'] > 2.5 ) && (county['unemp'] < 3.0)){
+                  return 'limegreen'
+                } 
               })
 
-              
+
 
 
               //   if (!county){
