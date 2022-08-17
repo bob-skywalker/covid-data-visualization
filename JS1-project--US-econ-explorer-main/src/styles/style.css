@@ -34,14 +34,10 @@ path:hover {
 #title2{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 40px;
-    /* color:rgb(246, 242, 242) */
+    color:rgb(246, 242, 242)
 }
 
 
-#title2.active{
-    transition: 2s;
-    color:rgb(246, 242, 242);
-}
 
 
 html, body{

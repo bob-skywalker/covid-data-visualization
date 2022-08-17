@@ -188,13 +188,17 @@ export const map = async function(){
                   return 'purple'
                 }
 
-                if(county['unemp'] < 2.0){
-                  return 'blue'
-                } else if ((county['unemp'] > 2.0 ) && (county['unemp'] < 2.5)){
-                  return 'yellow'
-                } else if ((county['unemp'] > 2.5 ) && (county['unemp'] < 3.0)){
-                  return 'limegreen'
-                } 
+                if(county['unemp'] < 3.0){
+                  return 'dodgerblue'
+                } else if ((county['unemp'] > 3.0 ) && (county['unemp'] < 4)){
+                  return 'royalblue'
+                } else if ((county['unemp'] > 4 ) && (county['unemp'] < 6)){
+                  return 'bisque'
+                } else if ((county['unemp'] > 6 ) && (county['unemp'] < 8)){
+                  return 'lightsalmon'
+                } else {
+                  return 'crimson'
+                }
               })
 
 
