@@ -177,13 +177,23 @@ export const map = async function(){
                 tooltip.transition()
                       .style("visibility","hidden")
               })
-              // .attr('fill',(countyDataItem)=>{
-              //   let id = countyDataItem['id']
-              //   let county = covidData.find((item)=>{
-              //     // console.log(item['us_county_fips'])
-              //     return +item.us_county_fips === id
+              .attr('fill',(countyDataItem)=>{
+                let id = countyDataItem['id']
+                let county = unemployData.find((item)=>{
+                  // console.log(item['us_county_fips'])
+                  return +item.fips === id
+                })
 
-              //   })
+                if (!county){
+                  return 'purple'
+                }
+
+                if(county['unemp'] < 5.0){
+                  return 'green'
+                }
+              })
+
+              
 
 
               //   if (!county){
