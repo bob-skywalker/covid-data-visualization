@@ -10,6 +10,7 @@ export const map = async function(){
     const canvas2 = document.querySelector('#canvas2');
     const leftSide = document.querySelector('#leftSide');
     const legend = document.querySelector('#legend');
+    const container2 = document.querySelector('#container2');
     toggle.onclick = function(){
       toggle.classList.toggle('active')
       body.classList.toggle('active')
@@ -19,6 +20,7 @@ export const map = async function(){
       canvas2.classList.toggle('hidden')
       leftSide.classList.toggle('hidden')
       legend.classList.toggle('hidden')
+      container2.classList.toggle('hidden')
     }
 
 
