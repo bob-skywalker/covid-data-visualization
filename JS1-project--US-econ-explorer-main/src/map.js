@@ -153,23 +153,23 @@ export const map = async function(){
               })
               .on('mouseover',(countyDataItem)=>{
                 tooltip.transition()
-                      .style("visibility", "visible")
+                      .style("visibility", "hidden")
 
                   let id = countyDataItem['id']
                   let county = covidData.find((item)=>{
                     return +item.us_county_fips === id
                   })
-                  if (county['population']< 3000){
-                    tooltip.text('Severity: Low  || County Cases: ' + county['population'])
-                  } else if ((county['population'] > 3000) && (county['population'] < 8000)){
-                    tooltip.text('Severity: Mild  || County Cases: ' + county['population'])
-                  } else if ((county['population'] > 8000) && (county['population'] < 20000)){
-                    tooltip.text('Severity: Moderate  || County Cases: ' + county['population'])
-                  } else if ((county['population'] > 20000) && (county['population'] < 250000)){
-                    tooltip.text('Severity: Severe  || County Cases: ' + county['population'])
-                  } else {
-                    tooltip.text('Severity: Devilish  || County Cases: ' + county['population'])
-                  }
+                  // if (county['population']< 3000){
+                  //   tooltip.text('Severity: Low  || County Cases: ' + county['population'])
+                  // } else if ((county['population'] > 3000) && (county['population'] < 8000)){
+                  //   tooltip.text('Severity: Mild  || County Cases: ' + county['population'])
+                  // } else if ((county['population'] > 8000) && (county['population'] < 20000)){
+                  //   tooltip.text('Severity: Moderate  || County Cases: ' + county['population'])
+                  // } else if ((county['population'] > 20000) && (county['population'] < 250000)){
+                  //   tooltip.text('Severity: Severe  || County Cases: ' + county['population'])
+                  // } else {
+                  //   tooltip.text('Severity: Devilish  || County Cases: ' + county['population'])
+                  // }
 
 
               })
@@ -188,7 +188,7 @@ export const map = async function(){
                   return 'purple'
                 }
 
-                if(county['unemp'] < 5.0){
+                if(county['unemp'] < 3.0){
                   return 'green'
                 }
               })
