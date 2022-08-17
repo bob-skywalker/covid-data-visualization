@@ -153,23 +153,23 @@ export const map = async function(){
               })
               .on('mouseover',(countyDataItem)=>{
                 tooltip.transition()
-                      .style("visibility", "hidden")
+                      .style("visibility", "visible")
 
                   let id = countyDataItem['id']
-                  let county = covidData.find((item)=>{
-                    return +item.us_county_fips === id
+                  let county = unemployData.find((item)=>{
+                    return +item.fips === id
                   })
-                  // if (county['population']< 3000){
-                  //   tooltip.text('Severity: Low  || County Cases: ' + county['population'])
-                  // } else if ((county['population'] > 3000) && (county['population'] < 8000)){
-                  //   tooltip.text('Severity: Mild  || County Cases: ' + county['population'])
-                  // } else if ((county['population'] > 8000) && (county['population'] < 20000)){
-                  //   tooltip.text('Severity: Moderate  || County Cases: ' + county['population'])
-                  // } else if ((county['population'] > 20000) && (county['population'] < 250000)){
-                  //   tooltip.text('Severity: Severe  || County Cases: ' + county['population'])
-                  // } else {
-                  //   tooltip.text('Severity: Devilish  || County Cases: ' + county['population'])
-                  // }
+                  if(county['unemp'] < 3.0){
+                    tooltip.text('County Unemployment Rate: ' + county['unemp'] + '%')
+                  } else if ((county['unemp'] > 3.0 ) && (county['unemp'] < 4)){
+                    tooltip.text('County Unemployment Rate: ' + county['unemp'] + '%')
+                  } else if ((county['unemp'] > 4 ) && (county['unemp'] < 6)){
+                    tooltip.text('County Unemployment Rate: ' + county['unemp'] + '%')
+                  } else if ((county['unemp'] > 6 ) && (county['unemp'] < 8)){
+                    tooltip.text('County Unemployment Rate: ' + county['unemp'] + '%')
+                  } else {
+                    tooltip.text('County Unemployment Rate: ' + county['unemp'] + '%')
+                  }
 
 
               })
@@ -204,38 +204,7 @@ export const map = async function(){
 
 
 
-              //   if (!county){
-              //     return 'firebrick'
-              //     // return 'limegreen'
-              //   }
-              //   let numbers = +county['population']
 
-              //   if(numbers < 3000){
-              //     return 'limegreen'
-              //   } else if ((numbers > 3000) && (numbers < 8000)){
-              //     return 'lightgreen'
-              //   } else if ((numbers > 8000) && (numbers < 20000)){
-              //     return 'orange'
-              //   } else if ((numbers > 20000) && (numbers < 250000)){
-              //     return 'tomato'
-              //   } else {
-              //     return 'firebrick'
-              //   }
-              // })
-
-              .attr('county-fips',(countyDataItem)=>{
-                return countyDataItem['id']
-              })
-              .attr('covid-county-population',(countyDataItem)=>{
-                let id = countyDataItem['id']
-                let county = covidData.find((item)=>{
-                  // console.log(item['us_county_fips'])
-                  return +item.us_county_fips === id
-
-                })
-                let numbers = +county['population']
-                return numbers
-              })
     }
 
     d3.json(countyURL).then(
