@@ -2,6 +2,7 @@
 
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="./map.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
@@ -11,7 +12,7 @@
     <!-- <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script> -->
     <!-- <script src="/src/map.js"></script> -->
-    <title>US Data Analyzer</title>
+    <title>US Data Visualizer</title>
   </head>
 
   <body>
@@ -21,8 +22,8 @@
       <a href="https://www.linkedin.com/in/bo-zhong-bb4a4b13a/"><img id="linkedin" src="./src/images/LI-In-Bug.png" alt="LinkedIn" width="40" height="40"></a>
       </div>
     </header>
-    <h1 id="title">US Covid Analyzer</h1>
-    <h1 id="title2" class="hidden">US Unemployment Analyzer</h1>
+    <h1 id="title">US Covid Visualizer</h1>
+    <h1 id="title2" class="hidden">US Unemployment Visualizer</h1>
     <div id="container">
       <div id ='leftSide'>
         <div id="tooltip">
@@ -54,8 +55,46 @@
 
       <svg id="canvas">
       </svg>
+      <div id="guide">
+      <!-- <p>* Hover over for Dynamic County Result</p> -->
+      <div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-button" onclick="openTab('covidMap')">Covid Map</button>
+        <button class="w3-bar-item w3-button" onclick="openTab('un')">Unemployment Map</button>
+        <button class="w3-bar-item w3-button" onclick="openTab('toggles')">Toggle</button>
+      </div>
 
-      
+      <div id="covidMap" class="w3-container w3-display-container city">
+        <span onclick="this.parentElement.style.display='none'"
+        class="w3-button w3-large w3-display-topright">&times;</span>
+        <h2>2020 Covid Cases By County</h2>
+        <p>Hover Over each segment on the US map to show the population of covid cases for the specific county. </p>
+      </div>
+
+      <div id="un" class="w3-container w3-display-container city" style="display:none">
+        <span onclick="this.parentElement.style.display='none'"
+        class="w3-button w3-large w3-display-topright">&times;</span>
+        <h2>2020 Unemployment Cases By County</h2>
+        <p>Hover Over each segment on the US map to show the population of Unemployment cases for the specific county.</p>
+      </div>
+
+      <div id="toggles" class="w3-container w3-display-container city" style="display:none">
+        <span onclick="this.parentElement.style.display='none'"
+        class="w3-button w3-large w3-display-topright">&times;</span>
+        <h2>Toggle</h2>
+        <p>Use the Slider at the bottom to switch between two maps!</p>
+      </div>
+      <script>
+        function openTab(cityName) {
+          var i;
+          var x = document.getElementsByClassName("city");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          document.getElementById(cityName).style.display = "block";
+        }
+        </script>
+
+
 
     </div>
 

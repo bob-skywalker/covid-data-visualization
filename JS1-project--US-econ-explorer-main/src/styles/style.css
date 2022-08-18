@@ -75,7 +75,8 @@ svg{
 
 
 #tooltip{
-    font-size: 14px;
+    padding: 15px;
+    font-size: 23px;
     font-weight: 600;
     text-align: center;
     visibility: hidden;
@@ -205,6 +206,30 @@ body.active{
     margin-left: 690px;
 }
 
+#guide{
+    position: absolute;
+    left: 1510px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    ;
+    font-size: small;
+}
+
+
+#tabs{
+    position:absolute;
+}
+
+
+.w3-bar w3-black{
+    top: 50px;
+}
+
 /* #title.active::after{
     content: 'US Unemployment Rate';
 } */
+
+
+button{
+    background-color:rgb(223, 144, 144);
+    cursor: pointer;
+}
