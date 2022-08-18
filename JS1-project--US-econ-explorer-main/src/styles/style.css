@@ -196,7 +196,14 @@ body.active{
 }
 
 
+#bottom{
+    display:flex;
+    justify-content: space-between;
+}
 
+#text{
+    margin-left: 730px;
+}
 
 /* #title.active::after{
     content: 'US Unemployment Rate';
