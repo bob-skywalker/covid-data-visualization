@@ -75,7 +75,7 @@ svg{
 
 
 #tooltip{
-    font-size: 25px;
+    font-size: 14px;
     font-weight: 600;
     text-align: center;
     visibility: hidden;
@@ -94,7 +94,7 @@ svg{
 } */
 
 #leftSide{
-    left: -240px;
+    left: -300px;
     z-index: -1;
     position: absolute;
     margin-top: 80px;
@@ -202,7 +202,7 @@ body.active{
 }
 
 #text{
-    margin-left: 730px;
+    margin-left: 690px;
 }
 
 /* #title.active::after{

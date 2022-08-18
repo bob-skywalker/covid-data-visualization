@@ -2,7 +2,7 @@ import { count } from "d3"
 
 export const map = async function(){
 
-  const body = document.querySelector('body');
+    const body = document.querySelector('body');
     const title = document.querySelector('#title');
     const title2 = document.querySelector('#title2');
     const toggle = document.getElementById("toggle");
@@ -11,6 +11,7 @@ export const map = async function(){
     const leftSide = document.querySelector('#leftSide');
     const legend = document.querySelector('#legend');
     const container2 = document.querySelector('#container2');
+    const tabs = document.querySelector('.tabs');
     toggle.onclick = function(){
       toggle.classList.toggle('active')
       body.classList.toggle('active')
@@ -21,6 +22,7 @@ export const map = async function(){
       leftSide.classList.toggle('hidden')
       legend.classList.toggle('hidden')
       container2.classList.toggle('hidden')
+      tabs.classList.toggle('hidden')
     }
 
 
