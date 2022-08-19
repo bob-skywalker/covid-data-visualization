@@ -14,7 +14,7 @@ export const map = async function(){
     const leftSide = document.querySelector('#leftSide');
     const legend = document.querySelector('#legend');
     const container2 = document.querySelector('#container2');
-    const tabs = document.querySelector('.tabs');
+    // const tabs = document.querySelector('.tabs');
     toggle.onclick = function(){
       tooltip1.classList.toggle('hidden')
       tooltip22.classList.toggle('hidden')
@@ -29,7 +29,7 @@ export const map = async function(){
       leftSide.classList.toggle('hidden')
       legend.classList.toggle('hidden')
       container2.classList.toggle('hidden')
-      tabs.classList.toggle('hidden')
+      // tabs.classList.toggle('hidden')
     }
 
 
