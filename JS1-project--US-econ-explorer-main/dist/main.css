@@ -30,6 +30,14 @@ path:hover {
 } */
 
 
+html {
+    zoom: 0.9; /* Old IE only */
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+
 #title{
     font-family:Arial, Helvetica, sans-serif;
     font-size: 40px;
@@ -79,8 +87,9 @@ svg{
 
 
 #tooltip{
-    padding: 15px;
-    font-size: 15px;
+    /* left: 20px; */
+    padding: 12px;
+    font-size: 24px;
     font-weight: 600;
     text-align: center;
     visibility: hidden;
@@ -89,6 +98,20 @@ svg{
     /* width: auto;
     height: auto; */
 }
+
+#tooltip2{
+    /* left: 20px; */
+    padding: 12px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    visibility: hidden;
+    color:whitesmoke;
+
+    /* width: auto;
+    height: auto; */
+}
+
 
 .county:hover{
     /* transform: translateY(-100px); */
@@ -101,7 +124,7 @@ svg{
 #leftSide{
     left: -300px;
     z-index: -1;
-    position: absolute;
+    /* position: absolute; */
     margin-top: 80px;
     display: flex;
     flex-direction: column;
@@ -110,10 +133,15 @@ svg{
     /* background-color: darkslategrey; */
 }
 
+
+
 #container{
     display: flex;
 }
 
+#container2{
+    display: flex;
+}
 
 #legend{
     text-align: center;
@@ -124,8 +152,11 @@ svg{
     margin-left: -50px;
 }
 
+
+
 #toggle{
-    position: relative;
+
+    position: absolute;
     display:block;
     width: 160px;
     height: 80px;
@@ -211,7 +242,7 @@ body.active{
 }
 
 #guide{
-    position: absolute;
+    /* position: absolute; */
     left: 1510px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     ;
